@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var img=null;
+            function init(){
+                img=document.getElementById('myimg');
+                img.style.position='relative';
+                img.style.left='50px';
+            }
+            function moveRight(){
+                img.style.left=parseInt(
+                    img.style.left)+150+'px';
+            }
+            window.onload=init;
+        </script>
+    </head>
+    <body>
+        <form>
+            <img id="myimg" src="duck.jpg"/>
+            <center> <p>Click the below button to move the image right</p>
+            <input type="button" value="Click Me" onclick="moveRight();"/>
+            </center>
+        </form>
+    </body>
+</html>

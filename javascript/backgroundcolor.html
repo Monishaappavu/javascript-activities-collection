@@ -1,0 +1,25 @@
+<select id="color" onchange="display()">  
+    <option value="Select Color">Select Color</option>  
+    <option value="yellow">Yellow</option>  
+    <option value="green">Green</option>  
+    <option value="red">Red</option>  
+</select>
+<script type="text/javascript">  
+    function display()  
+    {  
+var value = document.getElementById("color").value;  
+        if (value != "Select Color")  
+        {  
+            document.bgColor = value;  
+            document.cookie = "color=" + value;  
+        } }  
+    window.onload = function ()  
+    {  
+        if (document.cookie.length != 0)
+{  
+    var array = document.cookie.split("=");  
+    document.getElementById("color").value = array[1];  
+    document.bgColor = array[1];  
+        }  
+    }       
+</script>
